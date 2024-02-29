@@ -1,0 +1,45 @@
+@import url('./variables.css');
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+    33% {
+        width: 33%;
+    }
+    66% {
+        width: 66%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes counting {
+    0% { --num: 0 }
+    33% { --num: 33 }
+    66% { --num: 66 }
+    100% { --num: 100 }
+}
+
+@keyframes initText{
+    0% {content:"Initializing system . . ." }
+    17% {content:"Initializing system . . . \00000a Loading core modules . . ." }
+    27% {content:"Initializing system . . . \00000a Loading core modules . . . \00000a Verifying user permissions . . . " }
+    36% {content:"Initializing system . . . \00000a Loading core modules . . . \00000a Verifying user permissions . . . \00000a Compiling source code . . . " }
+    42% {content:"Initializing system . . . \00000a Loading core modules . . . \00000a Verifying user permissions . . . \00000a Compiling source code . . . \00000a Running diagnostics . . ." }
+    49% {content:"Loading core modules . . . \00000a Verifying user permissions . . . \00000a Compiling source code . . . \00000a Running diagnostics . . . \00000a Establishing secure connection . . ." }
+    60% {content:"Verifying user permissions . . . \00000a Compiling source code . . . \00000a Running diagnostics . . . \00000a Establishing secure connection . . . \00000a Scanning for vulnerabilities . . ." }
+    66% {content:"Compiling source code . . . \00000a Running diagnostics . . . \00000a Establishing secure connection . . . \00000a Scanning for vulnerabilities . . . \00000a Loading user interface . . . \00000a" }
+    78% {content:"Running diagnostics . . . \00000a Establishing secure connection . . . \00000a Scanning for vulnerabilities . . . \00000a Loading user interface . . . \00000a Executing startup procedures . . . \00000a" }
+    100% {content:"Establishing secure connection . . . \00000a Scanning for vulnerabilities . . . \00000a Loading user interface . . . \00000a Executing startup procedures . . . \00000a Initializing database connections . . . \00000a"   }
+  }

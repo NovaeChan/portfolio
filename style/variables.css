@@ -1,0 +1,12 @@
+:root {
+    --main-bg-color: #121212;
+    --secondary-bg-color: #ffffff;
+    --main-text-color: #ffffff;
+    --secondary-text-color: #000000;
+}
+
+@property --num {
+    syntax: "<integer>";
+    inherits: false;
+    initial-value: 0;
+}

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+@import url('./variables.css');
+@import url('./keyframes.css');
+
+body { 
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+
+    .loading-title {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        .loading-text {
+            margin-right: 10px;
+        }
+
+        .loading-gear {
+            font-size: 20px;
+            animation: rotate 1s linear infinite;
+            height: 100%;
+        }
+
+        .loading-number {
+            counter-reset: num var(--num);
+            margin-left:auto;
+            transition: --num 5s;
+            animation: counting 3s  ease-in-out;
+            animation-fill-mode: forwards;
+            
+            &:before {
+                content: counter(num);
+            }
+        }
+
+    }
+
+    .loadingBar-wrapper {
+        width: 100%;
+        border-top: 1px #FFFFFF solid;
+        border-bottom: 1px #FFFFFF solid;
+        border-radius: 3px;
+        margin-top: 5px;
+        padding: 3px;
+        .loadingBar {
+            height: 1rem;
+            width: 100%;
+            animation: loading 3s ease-in-out;
+            background: var(--secondary-bg-color);
+        }
+    }
+
+    .warning {
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+        height: 1.2rem;
+        align-items: center;
+
+        div { 
+            display: flex;
+            align-items: center;
+        }
+        
+        .careful {
+            width: 1rem;
+            padding-top: 10px;
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            color: black;
+            border-radius: 3px;
+        }
+
+        .cascadingText {
+            margin-left:auto;
+            display:flex;
+            align-items:end;
+            height: 2rem;
+            &:after{
+                height: 2rem;
+              font-size:12px;
+              white-space: pre;
+              text-align:end;
+              color:#b5b5b5;
+              content:"";
+              animation: initText 3s ease;
+              animation-fill-mode: forwards;        
+            }
+        }
+    }
+
+    .fa-triangle-exclamation {
+        color: var(--main-text-color);
+        margin-left: 3px;
+        margin-top: 2px;
+        font-size: 20px;
+    }
+}

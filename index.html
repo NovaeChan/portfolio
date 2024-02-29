@@ -4,10 +4,32 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <script src="https://kit.fontawesome.com/fb91980356.js" crossorigin="anonymous"></script>
+    <title>Loading...</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="container">
+      <div class="loading">
+        <div class="loading-title">
+          <p class="loading-text">LOADING</p>
+          <div class="loading-gear">∴</div>
+          <p class="loading-number">%</p>
+        </div>
+        <div class="loadingBar-wrapper">
+          <div class="loadingBar"></div>
+        </div>
+        <div class="warning">
+          <div>
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <p>&nbsp;CAUTION, Do not exit while loading&nbsp;</p>
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </div>
+          <div class="cascadingText"></div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
